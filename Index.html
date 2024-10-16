@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Bubble Sort | My Layout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Explore Sorting Algorithms</h1>
+        <p>Learn, Interact, and Sort Numbers Using JavaScript</p>
+    </header>
+
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <h2>Interactive Bubble Sort</h2>
+        <p>Enter numbers separated by commas, and click "Sort" to see them in ascending order!</p>
+        <input type="text" id="numberInput" placeholder="e.g. 3, 1, 4, 1, 5, 9">
+        <button id="sortButton">Sort</button>
+        <p>Sorted Numbers: <span id="sortedOutput"></span></p>
+    </main>
+
+    <aside class="ad">
+        <a href="https://www.amazon.com" target="_blank">
+            <img src="https://via.placeholder.com/200x300?text=Ad" alt="Advertisement">
+        </a>
+    </aside>
+
+    <footer>
+        <p>Last updated: <span id="lastModified"></span></p>
+        <p><strong>Addendum:</strong> This page demonstrates a Holy Grail Layout with a bubble sort algorithm. Users can input numbers, and our JavaScript will sort them in ascending order. Handling user input and ensuring valid parsing was the most challenging part.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
+</body>
+</html>

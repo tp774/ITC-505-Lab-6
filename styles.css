@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* Page layout with CSS Grid */
+/* Page layout using CSS Grid */
 body {
     display: grid;
     grid-template-areas:
@@ -16,18 +16,18 @@ body {
     grid-template-columns: 1fr 3fr 1fr;
     min-height: 100vh;
     font-family: 'Arial', sans-serif;
-    background: url('https://via.placeholder.com/1500x1000?text=Math+Background') no-repeat center center fixed;
-    background-size: cover;
+    background-color: #F3F4F6; /* Light grey background for a clean look */
     color: #333;
 }
 
 /* Header styling */
 header {
     grid-area: header;
-    background-color: rgba(0, 123, 255, 0.8);
+    background-color: #3B82F6; /* Blue theme */
     color: white;
     text-align: center;
     padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
@@ -38,14 +38,14 @@ header h1 {
 /* Sidebar navigation */
 .sidebar {
     grid-area: sidebar;
-    background-color: rgba(44, 62, 80, 0.9);
+    background-color: #1F2937; /* Dark grey sidebar */
     padding: 20px;
     color: white;
 }
 
 .sidebar a {
     display: block;
-    color: #FFD700;
+    color: #60A5FA; /* Light blue links */
     text-decoration: none;
     padding: 10px;
     margin: 8px 0;
@@ -53,14 +53,14 @@ header h1 {
 }
 
 .sidebar a:hover {
-    background-color: #FFD700;
-    color: #2C3E50;
+    background-color: #60A5FA;
+    color: white;
 }
 
 /* Main content styling */
 main {
     grid-area: main;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: white;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -74,7 +74,7 @@ main {
 }
 
 .ad img {
-    max-width: 60%; /* Smaller size for better fit */
+    max-width: 60%; /* Adjust size for better fit */
     height: auto;
     cursor: pointer;
     transition: transform 0.3s;
@@ -82,21 +82,22 @@ main {
 }
 
 .ad img:hover {
-    transform: scale(1.1); /* Zoom effect on hover */
+    transform: scale(1.1); /* Zoom effect */
 }
 
-/* Footer styles */
+/* Footer styling */
 footer {
     grid-area: footer;
-    background-color: rgba(51, 51, 51, 0.9);
+    background-color: #1F2937;
     color: white;
     text-align: center;
     padding: 15px;
+    margin-top: 10px;
 }
 
-/* Button styles */
+/* Button styling */
 button {
-    background-color: #28A745;
+    background-color: #10B981; /* Green theme */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -107,18 +108,18 @@ button {
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #059669; /* Darker green */
 }
 
 /* Success and error messages */
 .success-message {
-    color: #28A745;
+    color: #10B981;
     font-weight: bold;
     margin-top: 10px;
 }
 
 .error-message {
-    color: #FF5252;
+    color: #EF4444;
     font-weight: bold;
     margin-top: 10px;
 }

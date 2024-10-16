@@ -15,80 +15,98 @@ body {
     grid-template-columns: 1fr 2fr 1fr;
     min-height: 100vh;
     font-family: 'Arial', sans-serif;
-    background-color: #f0f4f8;
+    background: url('https://via.placeholder.com/1500x1000?text=Math+Background') no-repeat center center fixed;
+    background-size: cover;
     color: #333;
 }
 
 /* Layout sections */
 header {
     grid-area: header;
-    background-color: #4CAF50; /* Updated color */
+    background-color: rgba(0, 123, 255, 0.8); /* Transparent blue */
     color: white;
     padding: 20px;
     text-align: center;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
+    font-size: 2.8rem;
+    margin-bottom: 5px;
+    letter-spacing: 1.2px;
 }
 
 /* Sidebar styles */
 .sidebar {
     grid-area: sidebar;
-    background-color: #2C3E50;
+    background-color: rgba(44, 62, 80, 0.9);
     padding: 20px;
     color: white;
 }
 
 .sidebar a {
     display: block;
-    color: white;
+    color: #FFD700;
     text-decoration: none;
     padding: 10px;
-    margin: 5px 0;
-    transition: background-color 0.3s;
+    margin: 8px 0;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .sidebar a:hover {
-    background-color: #34495E; /* Updated hover color */
+    background-color: #FFD700;
+    color: #2C3E50;
 }
 
 /* Main content area */
 main {
     grid-area: main;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Advertisement area */
 .ad {
     grid-area: ad;
     text-align: center;
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    grid-area: footer;
+    background-color: rgba(51, 51, 51, 0.9);
+    color: white;
+    text-align: center;
     padding: 15px;
 }
 
-footer {
-    grid-area: footer;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-
+/* Button styling */
 button {
-    background-color: #4CAF50;
+    background-color: #28A745;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 25px;
     cursor: pointer;
     transition: background-color 0.3s;
     margin-top: 10px;
+    border-radius: 5px;
 }
 
 button:hover {
-    background-color: #45a049; /* Updated hover color */
+    background-color: #218838;
+}
+
+/* Success and error message styling */
+.success-message {
+    color: #28A745;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.error-message {
+    color: #FF5252;
+    font-weight: bold;
+    margin-top: 10px;
 }

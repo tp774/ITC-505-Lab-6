@@ -1,11 +1,11 @@
-/* Reset margins and padding for consistency */
+/* Reset margins and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Set up the page layout with CSS grid */
+/* Page layout using CSS grid */
 body {
     display: grid;
     grid-template-areas:
@@ -13,7 +13,7 @@ body {
         "sidebar main ad"
         "footer footer footer";
     grid-template-rows: auto 1fr auto;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
     min-height: 100vh;
     font-family: 'Arial', sans-serif;
     background: url('https://via.placeholder.com/1500x1000?text=Math+Background') no-repeat center center fixed;
@@ -24,7 +24,7 @@ body {
 /* Header styling */
 header {
     grid-area: header;
-    background-color: rgba(0, 123, 255, 0.8); /* Light transparent blue */
+    background-color: rgba(0, 123, 255, 0.8); /* Transparent blue */
     color: white;
     text-align: center;
     padding: 20px;
@@ -35,7 +35,7 @@ header h1 {
     margin-bottom: 5px;
 }
 
-/* Sidebar with links */
+/* Sidebar navigation */
 .sidebar {
     grid-area: sidebar;
     background-color: rgba(44, 62, 80, 0.9); /* Dark blue */
@@ -69,8 +69,20 @@ main {
 /* Advertisement section */
 .ad {
     grid-area: ad;
-    text-align: center;
+    text-align: right;  /* Align the ad to the right */
     padding: 15px;
+}
+
+.ad img {
+    max-width: 80%;  /* Adjust size to fit well */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s;
+    border-radius: 10px;  /* Slight border rounding for aesthetics */
+}
+
+.ad img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
 }
 
 /* Footer styling */

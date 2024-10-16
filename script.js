@@ -17,7 +17,7 @@ function bubbleSort(arr) {
 // Event listener for the "Sort" button
 document.getElementById('sortButton').addEventListener('click', function () {
     const input = document.getElementById('numberInput').value.trim();
-    
+
     if (input === "") {
         displayMessage("Please enter some numbers!", "error");
         return;

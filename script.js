@@ -4,7 +4,7 @@ function bubbleSort(arr) {
     for (let i = 0; i < n - 1; i++) {
         for (let j = 0; j < n - i - 1; j++) {
             if (arr[j] > arr[j + 1]) {
-                // Swap elements if they are out of order
+                // Swap using destructuring
                 [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
             }
         }
@@ -12,11 +12,11 @@ function bubbleSort(arr) {
     return arr;
 }
 
-// Add click event listener to the "Sort" button
+// Handle the "Sort" button click
 document.getElementById('sortButton').addEventListener('click', () => {
     const input = document.getElementById('numberInput').value.trim();
 
-    if (input === "") {
+    if (!input) {
         displayMessage("Please enter some numbers!", "error");
         return;
     }
@@ -29,19 +29,18 @@ document.getElementById('sortButton').addEventListener('click', () => {
         const sortedArray = bubbleSort(numArray);
         document.getElementById('sortedOutput').textContent = sortedArray.join(', ');
         displayMessage("Numbers sorted successfully!", "success");
-        document.getElementById('numberInput').value = ""; // Clear input after sorting
+        document.getElementById('numberInput').value = ""; // Clear input
     }
 });
 
-// Display messages (success or error) below the content
+// Function to display messages
 function displayMessage(message, type) {
     const msg = document.createElement('p');
     msg.textContent = message;
     msg.className = type === "error" ? "error-message" : "success-message";
 
-    const main = document.querySelector('main');
-    main.appendChild(msg);
+    document.querySelector('main').appendChild(msg);
 
-    // Remove the message after 3 seconds
+    // Remove message after 3 seconds
     setTimeout(() => msg.remove(), 3000);
 }

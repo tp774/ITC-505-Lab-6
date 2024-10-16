@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* Page layout using CSS grid */
+/* Page layout with CSS Grid */
 body {
     display: grid;
     grid-template-areas:
@@ -24,7 +24,7 @@ body {
 /* Header styling */
 header {
     grid-area: header;
-    background-color: rgba(0, 123, 255, 0.8); /* Transparent blue */
+    background-color: rgba(0, 123, 255, 0.8);
     color: white;
     text-align: center;
     padding: 20px;
@@ -38,14 +38,14 @@ header h1 {
 /* Sidebar navigation */
 .sidebar {
     grid-area: sidebar;
-    background-color: rgba(44, 62, 80, 0.9); /* Dark blue */
+    background-color: rgba(44, 62, 80, 0.9);
     padding: 20px;
     color: white;
 }
 
 .sidebar a {
     display: block;
-    color: #FFD700; /* Gold */
+    color: #FFD700;
     text-decoration: none;
     padding: 10px;
     margin: 8px 0;
@@ -69,23 +69,23 @@ main {
 /* Advertisement section */
 .ad {
     grid-area: ad;
-    text-align: right;  /* Align the ad to the right */
+    text-align: right;
     padding: 15px;
 }
 
 .ad img {
-    max-width: 80%;  /* Adjust size to fit well */
+    max-width: 60%; /* Smaller size for better fit */
     height: auto;
     cursor: pointer;
     transition: transform 0.3s;
-    border-radius: 10px;  /* Slight border rounding for aesthetics */
+    border-radius: 10px;
 }
 
 .ad img:hover {
     transform: scale(1.1); /* Zoom effect on hover */
 }
 
-/* Footer styling */
+/* Footer styles */
 footer {
     grid-area: footer;
     background-color: rgba(51, 51, 51, 0.9);
@@ -94,9 +94,9 @@ footer {
     padding: 15px;
 }
 
-/* Button styling */
+/* Button styles */
 button {
-    background-color: #28A745; /* Green */
+    background-color: #28A745;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -107,7 +107,7 @@ button {
 }
 
 button:hover {
-    background-color: #218838; /* Darker green */
+    background-color: #218838;
 }
 
 /* Success and error messages */
